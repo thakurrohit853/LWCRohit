@@ -4,8 +4,8 @@ export default class BasicCalculator extends LightningElement {
 
     firstInput;
     secondInput;
-    totalValue; 
-    showResult;
+    totalValue;  
+    showResult=false;  
     firstInputChange(event){
         this.firstInput =  event.target.value;   
     } 
@@ -13,20 +13,21 @@ export default class BasicCalculator extends LightningElement {
         this.secondInput = event.target.value;
     }  
     add(event){
-        this.totalValue = Number(this.firstInput) + Number(this.secondInput); 
-        ths.showResult = true;
+        this.totalValue = Number(this.firstInput) + Number(this.secondInput);
+        this.showResult = true;         
     }
     subtract(event){
         this.totalValue = Number(this.firstInput) - Number(this.secondInput); 
-        ths.showResult = true;
+        this.showResult = true;        
     }
     multipication(event){
-        this.totalValue = Number(this.firstInput) * Number(this.secondInput); 
-        ths.showResult = true;
+        this.totalValue = Number(this.firstInput) * Number(this.secondInput);  
+        this.showResult = true;      
     }
     div(event){
         this.totalValue = Number(this.firstInput) / Number(this.secondInput); 
-        ths.showResult = true;
+        this.showResult = true;       
     }
+
 }
 
