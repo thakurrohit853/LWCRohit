@@ -1,7 +1,7 @@
 <template>
    <div>
         <lightning-card title={courseDetailInfo.courseName}>
-            <lightning-button label="Enroll" slot="actions"></lightning-button>
+            <lightning-button label="Enroll" slot="actions" onclick={NavigateToCourse}></lightning-button>
             <div class="slds-p-horizontal_small">
                 <ul>
                     <li>Course Fee: {courseDetailInfo.courseFee}</li>
@@ -12,5 +12,5 @@
                 {courseDetailInfo.courseRating}
             </div>
         </lightning-card>
-    </div>    
+    </div>       
 </template>
